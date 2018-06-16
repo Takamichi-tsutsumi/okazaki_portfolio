@@ -1,0 +1,42 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  padding: 2rem;
+  width: auto;
+}
+
+h1.title {
+  color: black;
+  display: inline-block;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.header-menu {
+  display: inline-block;
+  float: right;
+}
+
+.header-menu li {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 2rem;
+}
