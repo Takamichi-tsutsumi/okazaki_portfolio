@@ -4,7 +4,10 @@ html {
 
 body {
   box-sizing: border-box;
+/* これをちゃんとしたい */
+  /* width: 30000px; */
   width: 100%;
+  overflow-x: hidden;
 }
 
 *,
@@ -17,6 +20,11 @@ body {
 
 ul {
   list-style-type: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: white;
 }
 
 header {
@@ -40,47 +48,73 @@ h1.title {
   line-height: 3rem;
 }
 
-.swiper-container {
-    width: 100vw;
-    height: 100vh;
-}
-
-.swiper-slide {
-  /* width: 90%; */
-  background-position: 50% 50%;
-  background-size: cover;
-  /* background-repeat: no-repeat; */
-}
-
-.swiper-slide.slide-1{
-  background-image: url("../images/top_1024_1.jpg");
-}
-
-
-.swiper-slide.slide-2{
-  background-image: url("../images/top_1024_2.jpg");
-}
-
-.swiper-slide.slide-3{
-  background-image: url("../images/top_1024_3.jpg");
-}
-
-.swiper-slide.slide-4{
-  background-image: url("../images/top_1024_4.jpg");
-}
-
-.swiper-slide.slide-5{
-  background-image: url("../images/top_1024_5.jpg");
-}
-
-
-.header-menu {
-  display: inline-block;
-  float: right;
-}
-
 .header-menu li {
   text-transform: uppercase;
   display: inline-block;
   padding: 0 2rem;
+}
+.background-slide {
+  /* overflow: hidden; */
+  white-space: nowrap;
+}
+
+.background-slide img {
+  height: 100vh;
+}
+
+.background-slide-loop {
+  position: absolute;
+}
+
+.background-slide-loop li {
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-3%);
+}
+
+/* .background-slide-each {
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-3%);
+  display: inline-block;
+} */
+
+.latest-container {
+  position: fixed;
+  width: 100%;
+  top: 300px;
+}
+
+.latest {
+/* ここがなんでwidth必要なのかわからない */
+  width: 200px;
+  margin: auto;
+}
+
+.latest a {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  line-height: 25px;
+  width: 200px;
+  text-align: center;
+}
+
+.icon-container {
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+}
+
+.icons {
+  width: 170px;
+  margin: auto;
+  text-align: center;
+}
+
+.fab, .far {
+  font-size: 2rem;
+  color: white;
+  padding: 0 5px;
 }
