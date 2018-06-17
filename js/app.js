@@ -48,4 +48,6 @@ $(function() {
       $(".background-slide-loop li:first").remove();
     }
   }, 2000);
+
+
 });

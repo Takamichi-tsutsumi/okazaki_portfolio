@@ -4,8 +4,6 @@ html {
 
 body {
   box-sizing: border-box;
-/* これをちゃんとしたい */
-  /* width: 30000px; */
   width: 100%;
   overflow-x: hidden;
 }
@@ -24,11 +22,10 @@ ul {
 
 a {
     text-decoration: none !important;
-    color: white;
+    color: inherit;
 }
 
 header {
-  color: white;
   z-index: 5;
   position: fixed;
   top: 0;
@@ -37,15 +34,18 @@ header {
   width: 100%;
 }
 
+header#index, #archive{
+  color: white;
+}
+
+header#contact, #bio {
+  color: black;
+}
+
 h1.title {
   display: inline-block;
   font-size: 2rem;
   padding-left: 2rem;
-}
-
-.button-text {
-  letter-spacing: 0.2rem;
-  font-weight: 600;
 }
 
 .header-menu-container {
@@ -58,6 +58,7 @@ h1.title {
   display: inline-block;
   padding: 0 2rem;
 }
+
 .background-slide {
   /* overflow: hidden; */
   white-space: nowrap;
@@ -77,16 +78,12 @@ h1.title {
   transform: translateX(-3%);
 }
 
-/* .background-slide-each {
-  transition: all 0.5s ease-in-out;
-  transform: translateX(-3%);
-  display: inline-block;
-} */
-
 .latest-container {
   position: fixed;
   width: 100%;
-  top: 300px;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .latest {
@@ -97,12 +94,14 @@ h1.title {
 
 .latest a {
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.6);
-  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 1.1rem;
   color: black;
   line-height: 25px;
   width: 200px;
   text-align: center;
+  letter-spacing: 0.8rem;
+  font-weight: 600;
 }
 
 .icon-container {
@@ -122,6 +121,27 @@ h1.title {
   color: white;
   padding: 0 5px;
 }
+
+/* <------------------biography--------------------> */
+
+.bio-container {
+  position: absolute;
+  top: 92vh;
+  margin-left: 5%;
+}
+
+.bio-container h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  padding-bottom: 10px
+}
+
+.bio-container p {
+  font-size: 1rem;
+  line-height: 5rem;
+}
+
 
 /* <------------------archive--------------------> */
 
@@ -151,29 +171,63 @@ h1.title {
 }
 
 .project-title h2 {
-  font-size: 4.5rem;
+
 }
 
 .project-1-title {
+  font-size: 5rem;
+  letter-spacing: -0.1rem;
   color: white;
+  font-style: italic;
 }
 
 .project-2-title {
+  font-size: 7rem;
   color: white;
-  letter-spacing: 1rem;
-  font-family: helvetica;
-  font-weight: 400;
+  letter-spacing: 2rem;
+  font-family: "Avenir-Next";
+  font-weight: 700;
 }
 
 .look-button {
-  width: 80px;
+  width: 170px;
   height: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+  /* border: 2px solid rgba(255, 255, 255, 0.7); */
   margin-left: auto;
   margin-right: auto;
 }
 
 .look-button a {
   color: black;
+  mix-blend-mode: multiply;
   line-height: 20px;
+  letter-spacing: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* <------------------contact--------------------> */
+
+.message-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 200px;
+  height: 100px;
+}
+
+.message-container p {
+  font-size: 1rem;
+  line-height: 4rem;
+}
+
+#contact-icon {
+  font-size: 1.2rem;
+  color: black;
+  padding-right: 1rem;
 }
