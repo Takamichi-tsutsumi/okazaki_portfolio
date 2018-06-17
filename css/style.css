@@ -4,6 +4,7 @@ html {
 
 body {
   box-sizing: border-box;
+  width: 100%;
 }
 
 *,
@@ -19,16 +20,59 @@ ul {
 }
 
 header {
+  color: white;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 2rem;
-  width: auto;
+  width: 100%;
 }
 
 h1.title {
-  color: black;
   display: inline-block;
   font-size: 2rem;
   padding-left: 2rem;
 }
+
+.header-menu-container {
+  float: right;
+  line-height: 3rem;
+}
+
+.swiper-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.swiper-slide {
+  /* width: 90%; */
+  background-position: 50% 50%;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+.swiper-slide.slide-1{
+  background-image: url("../images/top_1024_1.jpg");
+}
+
+
+.swiper-slide.slide-2{
+  background-image: url("../images/top_1024_2.jpg");
+}
+
+.swiper-slide.slide-3{
+  background-image: url("../images/top_1024_3.jpg");
+}
+
+.swiper-slide.slide-4{
+  background-image: url("../images/top_1024_4.jpg");
+}
+
+.swiper-slide.slide-5{
+  background-image: url("../images/top_1024_5.jpg");
+}
+
 
 .header-menu {
   display: inline-block;
