@@ -9,8 +9,84 @@
   <link rel="stylesheet" type="text/css" href="./vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="./vendor/slick/slick-theme.css" />
   <link rel="stylesheet" href="./css/style.css">
+  <style>
+    svg {
+      overflow: visible;
+    }
+
+    text {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      -webkit-animation: draw 3s forwards;
+      -moz-animation: draw 3s forwards;
+      -o-animation: draw 3s forwards;
+      -ms-animation: draw 3s forwards;
+      animation: draw 3s forwards;
+    }
+
+    #title-container {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 80px;
+      z-index: 50
+    }
+
+    #title-text {
+      animation: fill-out .8s .8s forwards;
+    }
+
+    @keyframes draw {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fill-out {
+      0% {
+        fill-opacity: 0;
+      }
+      100% {
+        fill-opacity: 1;
+      }
+    }
+
+    .overlay {
+      z-index: 30;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(30, 30, 30);
+      animation: fade-out .8s 1.8s forwards;
+    }
+
+    @keyframes fade-out {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="overlay">
+    <svg id="title-container">
+      <g id="title-text-wrap" stroke="none" stroke-width="2" fill="none" fill-rule="evenodd" font-weight="normal" font-family="Avenir next"
+        letter-spacing="2" font-size="80">
+        <g id="title-text" stroke="#fff" stroke-width="1" fill="#fff" fill-opacity="0">
+          <text id="Svg.html">
+            <tspan y="55%">RYUNOSUKE OKAZAKI</tspan>
+          </text>
+        </g>
+      </g>
+    </svg>
+  </div>
   <header id="index">
     <h1 class="title">
       <a href="index.html">RYUNOSUKE OKAZAKI</a>
@@ -42,6 +118,7 @@
       </li>
     </ul>
   </div>
+
   <div class="latest-container">
     <div class="latest">
       <a href="./archive.html">LATEST</a>
