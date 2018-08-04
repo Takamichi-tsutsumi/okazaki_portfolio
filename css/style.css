@@ -21,8 +21,8 @@ ul {
 }
 
 a {
-    text-decoration: none !important;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -34,11 +34,13 @@ header {
   width: 100%;
 }
 
-header#index, #archive{
+header#index,
+#archive {
   color: white;
 }
 
-header#contact, #bio {
+header#contact,
+#bio {
   color: black;
 }
 
@@ -87,7 +89,7 @@ h1.title {
 }
 
 .latest {
-/* ここがなんでwidth必要なのかわからない */
+  /* ここがなんでwidth必要なのかわからない */
   width: 200px;
   margin: auto;
 }
@@ -116,7 +118,8 @@ h1.title {
   text-align: center;
 }
 
-.fab, .far {
+.fab,
+.far {
   font-size: 2rem;
   color: white;
   padding: 0 5px;
@@ -124,24 +127,56 @@ h1.title {
 
 /* <------------------biography--------------------> */
 
-.bio-container {
-  position: absolute;
-  top: 92vh;
-  margin-left: 5%;
+header#bio {
+  background-color: white;
 }
 
+.bio-row {
+  margin-top: 70px;
+  display: flex;
+}
+
+.bio-img-container {
+  flex: 1;
+  height: max-content;
+}
+
+.bio-img {
+  width: 100%;
+}
+
+.bio-container {
+  flex: 1;
+  margin-left: 5%;
+  height: max-content;
+}
+
+@media (min-width: 760px) {
+  .bio-container {
+    transform: translateY(calc(95vh - 70px));
+  }
+
+  .bio-img-container {
+    position: sticky;
+  }
+}
+
+@media (max-width: 759px) {
+  .bio-row {
+    display: block;
+  }
+}
 .bio-container h2 {
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 4rem;
-  padding-bottom: 10px
+  padding-bottom: 10px;
 }
 
 .bio-container p {
   font-size: 1rem;
   line-height: 5rem;
 }
-
 
 /* <------------------archive--------------------> */
 
@@ -155,14 +190,12 @@ h1.title {
 
 .project-title-container {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 700px;
-  height: 100px;
-  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
 }
 
 .project-title {
@@ -171,7 +204,6 @@ h1.title {
 }
 
 .project-title h2 {
-
 }
 
 .project-1-title {
@@ -185,7 +217,7 @@ h1.title {
   font-size: 7rem;
   color: white;
   letter-spacing: 2rem;
-  font-family: "Avenir-Next";
+  font-family: 'Avenir-Next';
   font-weight: 700;
 }
 
@@ -217,7 +249,7 @@ h1.title {
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 200px;
+  width: max-content;
   height: 100px;
 }
 
@@ -230,4 +262,31 @@ h1.title {
   font-size: 1.2rem;
   color: black;
   padding-right: 1rem;
+}
+
+.slider {
+  height: 100vh;
+  width: 100vw;
+}
+
+.slick-item {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: cover;
+}
+
+.slick-item.item-1 {
+  background-image: url(../images/top_1024_1.jpg);
+}
+.slick-item.item-2 {
+  background-image: url(../images/top_1024_2.jpg);
+}
+.slick-item.item-3 {
+  background-image: url(../images/top_1024_3.jpg);
+}
+.slick-item.item-4 {
+  background-image: url(../images/top_1024_4.jpg);
 }
