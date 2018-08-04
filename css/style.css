@@ -209,22 +209,36 @@ header#bio {
   padding-bottom: 20px;
 }
 
-.project-title h2 {
-}
-
 .project-1-title {
-  font-size: 5rem;
-  letter-spacing: -0.1rem;
   color: white;
   font-style: italic;
+  letter-spacing: -0.1rem;
 }
 
 .project-2-title {
-  font-size: 7rem;
-  color: white;
-  letter-spacing: 2rem;
   font-family: 'Avenir-Next';
   font-weight: 700;
+  color: white;
+  letter-spacing: 2rem;
+}
+
+@media (min-width: 591px) {
+  .project-1-title {
+    font-size: 5rem;
+  }
+
+  .project-2-title {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .project-1-title {
+    font-size: 2.8rem;
+  }
+  .project-2-title {
+    font-size: 3.6rem;
+  }
 }
 
 .look-button {
