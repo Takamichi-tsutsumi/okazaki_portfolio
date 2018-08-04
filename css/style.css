@@ -136,6 +136,12 @@ header#bio {
   display: flex;
 }
 
+@media (max-width: 590px) {
+  .bio-row {
+    margin-top: 100px;
+  }
+}
+
 .bio-img-container {
   flex: 1;
   height: max-content;
